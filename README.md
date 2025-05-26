@@ -35,3 +35,29 @@ This project is a cloud-based news aggregation and sentiment analysis system bui
 
    ```bash
    pip install -r requirements.txt
+
+Set environment variables:
+export NEWS_API_KEY=your_newsapi_key
+export FIREBASE_KEY_PATH=path/to/service-account.json
+
+Run the application:
+python main.py
+
+
+This will:
+
+Fetch news articles from NewsAPI
+
+Analyze their sentiment
+
+Upload results to Firestore
+
+
+Docker Support
+To build and run the app in Docker:
+
+docker build -t news-sentiment-app .
+docker run -e NEWS_API_KEY=your_api_key -v /path/to/service-account.json:/app/service-account.json news-s
+
+License
+This project is for academic purposes only.
